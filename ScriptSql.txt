@@ -1,0 +1,49 @@
+-- =========================================
+-- CREAR BASE DE DATOS
+-- =========================================
+CREATE DATABASE MATH_PUZZLE;
+
+-- =========================================
+-- USAR BASE DE DATOS
+-- =========================================
+USE MATH_PUZZLE;
+
+-- =========================================
+-- CREAR TABLA USUARIO
+-- =========================================
+CREATE TABLE usuario (
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+
+    nombre VARCHAR(100) NOT NULL,
+
+    correo VARCHAR(150) NOT NULL UNIQUE,
+
+    contrasena VARCHAR(255) NOT NULL
+
+);
+
+-- =========================================
+-- INSERTAR DATOS DE PRUEBA
+-- =========================================
+INSERT INTO usuario (
+    nombre,
+    correo,
+    contrasena
+)
+VALUES
+(
+    'Kevin',
+    'kevin@gmail.com',
+    '123456'
+),
+(
+    'Laura',
+    'laura@gmail.com',
+    'abc123'
+);
+
+-- =========================================
+-- CONSULTAR DATOS
+-- =========================================
+SELECT * FROM usuario;
